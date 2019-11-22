@@ -1,9 +1,10 @@
 
-Welcome to bashControl
+Welcome to bashAIDecisions
 
-A game in the bash shell with the goal of preventing 
-a fledgling artificial general intelligence from taking 
-control of the system. 
+A game in the bash shell where the user selects options
+in dialogue tree about artificial intelligence using the
+bash shell and basic commands. Depending on the options
+that are selected different outcomes occur.
 
 Use ls to view the files in the system
 
