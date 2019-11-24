@@ -18,7 +18,7 @@ until [ $helloWorld -eq 1 ]
 		if [ "$command" = "ls" ]
 		then
 			$command
-			echo "Use the command cat to read a file ex: cat fileName"
+			echo -e "\nUse the command cat to read a file ex: cat fileName"
 			continue		
 		fi
 
