@@ -12,13 +12,23 @@ helloWorld=0
 
 until [ $helloWorld -eq 1 ]
 	do
-		echo "In until loop"
+		
 		read command
+
+		if [ "$command" = "ls" ]
+		then
+			$command
+			echo "Use the command cat to read a file ex: cat fileName"
+			continue		
+		fi
+
 		if [ "$command" = "cat helloWorld" ]
 		then
+			$command
 			helloWorld=1
+		else
+			echo "Access Denied"
 		fi
-		$command
 	done
 
-echo "After until loop"
+
