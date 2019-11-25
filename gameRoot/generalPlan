@@ -28,7 +28,8 @@ network works
 aiDirector asks user to create a directory and copy a file to it
 
 then the user creates a dir name myDir and copies a file called
-secretInfo or helloWorld to the directory as decision based
+helloWorld to the directory then creates a file using touch
+with 2 different options as a decision based occurence
 
 then another decision tree is triggered then after that a summary
 of decisions and the reaction of the creator named Nagafen occurs

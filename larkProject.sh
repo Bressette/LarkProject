@@ -32,3 +32,24 @@ until [ $helloWorld -eq 1 ]
 	done
 
 
+aiDirector=0
+password=0
+
+until [ $aiDirector -eq 1 ]
+	do
+		read -p "Run the aiDirector using ./aiDirector" choice
+		if [ "$choice" = "./aiDirector" ]
+		then
+			aiDirector=1
+			while [ $password -lt 3 ]
+			do
+			read -p "Enter the admin password" admin
+			echo "Incorrect Password try again"
+			((password++))
+			done
+		fi
+
+	done
+
+
+
