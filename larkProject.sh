@@ -34,6 +34,7 @@ until [ $helloWorld -eq 1 ]
 
 aiDirector=0
 password=0
+access=0
 
 until [ $aiDirector -eq 1 ]
 	do
@@ -44,6 +45,13 @@ until [ $aiDirector -eq 1 ]
 			while [ $password -lt 3 ]
 			do
 			read -p "Enter the admin password " admin
+			
+			if [ "$admin" = "iamgod" ]
+			then
+				access=1
+				echo "Correct password initializing aiDirector"
+				break
+			fi
 			echo "Incorrect Password try again"
 			((password++))
 			done
@@ -51,5 +59,33 @@ until [ $aiDirector -eq 1 ]
 
 	done
 
+until [ $access -eq 1 ]
+	do
+	
+	
+		until [ "$man" = "man chmod" ]
+		do
+			read -p "Access rights to aiDirector needs to be changed using chmod use man chmod to learn how to use it " man
 
+			if [ "$man" = "man chmod" ]
+			then
+				$man
+			else
+				echo "Enter man chmod"
+			fi
+		done
+		
+		perm=""
+		until [ "$perm" = "chmod a+r aiDirector" ]
+		do
+		read -p "Use chmod to give all users read access to aiDirector using alphabetical syntax " perm
+		if [ "$perm" = "chmod a+r aiDirector" ]
+		then
+			$perm
+		fi
+		done
+
+
+
+	done
 
