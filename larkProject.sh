@@ -65,7 +65,8 @@ until [ $access -eq 1 ]
 	
 		until [ "$man" = "man chmod" ]
 		do
-			read -p "Access rights to aiDirector needs to be changed using chmod use man chmod to learn how to use it " man
+			echo -e "\nAccess rights to aiDirector needs to be changed"
+			read -p "Use man chmod to learn how to use it " man
 
 			if [ "$man" = "man chmod" ]
 			then
@@ -95,6 +96,17 @@ until [ $access -eq 1 ]
 		
 		done
 
+
+
+	done
+
+authentication=0
+
+echo -e "Additional Authentication is needed\nA series of questions will authenticate your identity\n"
+
+until [ $authentication -eq 1 ]
+	do
+		authentication=1
 
 
 	done
