@@ -75,14 +75,24 @@ until [ $access -eq 1 ]
 			fi
 		done
 		
-		perm=""
+		tries=0	
 		until [ "$perm" = "chmod a+r aiDirector" ]
 		do
+		
+		if [ $tries -eq 3 ]
+		then
+			read -p "Use chmod a+r aiDirector to get access to aiDirector " perm
+		else
 		read -p "Use chmod to give all users read access to aiDirector using alphabetical syntax " perm
+		fi
 		if [ "$perm" = "chmod a+r aiDirector" ]
 		then
 			$perm
+			access=1
+			break
 		fi
+		((tries++))
+		
 		done
 
 
