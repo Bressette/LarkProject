@@ -107,7 +107,41 @@ echo -e "Additional Authentication is needed\nA series of questions will authent
 until [ $authentication -eq 1 ]
 	do
 		authentication=1
+		cd decisionChoices
+		cd q1
 
+		echo "2+2=? "
 
+		select question in *;
+		do
+			q1Answer=$questioin
+			break
+		done		
+		
+		cd ..
+		cd q2
+
+		echo "^_^"
+		select question in *;
+		do
+			q2Answer=$question
+			break
+		done
+		
+		cd ..
+		cd q3
+		echo "What is a person to you?"
+		select question in *;	
+		do
+			q3Answer=$question
+		done
+		
+		cd ..
+		cd q4
+		echo -e "You are walking through the desert and come across a thirsty traveller.\nYou have water, but are unsure how long it will be before you get more. What do you do?"
+		select question in *;
+		do
+			q4Answer = $question
+		done
 	done
 
