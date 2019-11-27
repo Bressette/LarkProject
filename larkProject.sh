@@ -3,13 +3,14 @@
 # A terminal learning game using bash scripting
 
 read -p "Enter your name " userName
-echo "Your name is $userName"
+echo -e "\nYour name is $userName"
 
 cd gameRoot
 cat README
 
 helloWorld=0
 
+cd helloWorld
 until [ $helloWorld -eq 1 ]
 	do
 		
@@ -36,6 +37,7 @@ aiDirector=0
 password=0
 access=0
 
+cd ..
 until [ $aiDirector -eq 1 ]
 	do
 		read -p "Run the aiDirector using ./aiDirector " choice
