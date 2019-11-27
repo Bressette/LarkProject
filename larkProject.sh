@@ -147,3 +147,10 @@ until [ $authentication -eq 1 ]
 		done
 	done
 
+echo "Additional authentication will be needed for full admin priveleges but basic read access is granted"
+cd interestingFiles
+ls
+
+
+
+
