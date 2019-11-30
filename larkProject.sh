@@ -169,8 +169,8 @@ until [ $quit -eq 1 ]
 	done
 userDir=0
 
-
-until [ userDir -eq 1 ]
+cd ..
+until [ $userDir -eq 1 ]
 	do
 		echo "To gain full access create a user profile - Change to the users directory using cd"
 		read changeDir
@@ -183,6 +183,6 @@ until [ userDir -eq 1 ]
 
 createDir=0
 
-
+echo "Everything works"
 
 
