@@ -151,6 +151,18 @@ echo "Additional authentication will be needed for full admin priveleges but bas
 cd interestingFiles
 ls
 
+quit=0
 
+until [ $quit -eq 1 ]
+	do
+		read -p "The less command can be used instead of cat for reading files(Press q to quit)" choice
+		if [ "$choice" = "q" ]
+		then
+			quit=1
+		else
+			$choice
+		fi
+
+	done
 
 
