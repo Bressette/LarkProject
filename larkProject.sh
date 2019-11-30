@@ -183,6 +183,18 @@ until [ $userDir -eq 1 ]
 
 createDir=0
 
-echo "Everything works"
+until [ $createDir -eq 1 ]
+	do
+		read -p "Create a directory with your name using mkdir ex: mkdir name" nameDir
+		$nameDir
+		if [ "$nameDir" = "mkdir $userName" ]
+			then
+				createDir=1
+			fi
+
+
+	done
+
+echo "After createDir"
 
 
