@@ -136,6 +136,7 @@ until [ $authentication -eq 1 ]
 		select question in *;	
 		do
 			q3Answer=$question
+			break
 		done
 		
 		cd ..
@@ -144,6 +145,7 @@ until [ $authentication -eq 1 ]
 		select question in *;
 		do
 			q4Answer = $question
+			break
 		done
 	done
 
