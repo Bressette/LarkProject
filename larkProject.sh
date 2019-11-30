@@ -144,7 +144,7 @@ until [ $authentication -eq 1 ]
 		echo -e "You are walking through the desert and come across a thirsty traveller.\nYou have water, but are unsure how long it will be before you get more. What do you do?"
 		select question in *;
 		do
-			q4Answer = $question
+			q4Answer=$question
 			break
 		done
 	done
@@ -181,7 +181,7 @@ until [ userDir -eq 1 ]
 		fi
 	done
 
-
+createDir=0
 
 
 
