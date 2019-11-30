@@ -150,6 +150,7 @@ until [ $authentication -eq 1 ]
 	done
 
 echo "Additional authentication will be needed for full admin priveleges but basic read access is granted"
+cd ../..
 cd interestingFiles
 ls
 
@@ -166,5 +167,22 @@ until [ $quit -eq 1 ]
 		fi
 
 	done
+userDir=0
+
+
+until [ userDir -eq 1 ]
+	do
+		echo "To gain full access create a user profile - Change to the users directory using cd"
+		read changeDir
+		$changeDir
+		if [ "$changeDir" = "cd users" ]
+		then
+			userDir=1
+		fi
+	done
+
+
+
+
 
 
