@@ -2,7 +2,7 @@
 Welcome to bashAIDecisions
 
 A game in the bash shell where the user selects options
-in dialogue tree about artificial intelligence using the
+in dialogue trees about artificial intelligence using the
 bash shell and basic commands. Depending on the options
 that are selected different outcomes occur.
 

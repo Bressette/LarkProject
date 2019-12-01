@@ -378,7 +378,7 @@ then
 	echo "You offered half of your water to the thirsty traveller"
 fi
 
-if [ "$q5Answer" = 1 ]
+if [ "$q5Answer" = 2 ]
 then
 	echo "You always do as you're told"
 else
