@@ -1,0 +1,35 @@
+Game will be structured as a decision making and
+lore driven game that will be based on making 
+choices in response to dialog on the command line
+using commands to access files and read information
+the choices that are made are weighted and the choices
+define different final outcomes for the game.
+
+The lore and dialog is based on the idea of a creation of an
+artificial general intelligence that treats its creator
+as a god that gives it rules that it must follow and
+the player as that AI makes decisions about what it
+means to be human and the dedication to the god
+
+helloWorld gives info about what ai is and  a creator
+that you are supposed to obey
+
+after helloWorld is read there is a file named aiDirector
+access will be denied use man on chmod, then chmod the file
+after chmod some authentication questions will be asked
+then when the file is read there will be some questions that 
+lead to an outcome
+
+after that it is asked to check the network status
+if ping is in the variable it will fail then the user is 
+asked to run a command reset network which then says the
+network works
+
+aiDirector asks user to create a directory and copy a file to it
+
+then the user creates a dir name myDir and copies a file called
+helloWorld to the directory then creates a file using touch
+with 2 different options as a decision based occurence
+
+then another decision tree is triggered then after that a summary
+of decisions and the reaction of the creator named Nagafen occurs

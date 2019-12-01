@@ -182,7 +182,6 @@ until [ $userDir -eq 1 ]
 	done
 
 createDir=0
-rm -r $userName
 
 until [ $createDir -eq 1 ]
 	do
@@ -200,12 +199,12 @@ copyAdmin=0
 
 until [ $copyAdmin -eq 1 ]
 	do
-		read -p "Copy the permissions file in users/admin/permissions to users/$userName/permissions using cp source destination " copyPerm
+		read -p "Copy the permissions file in admin/permissions to $userName/permissions using cp source destination " copyPerm
 		if [ "$copyPerm" = "cp admin/permissions $userName/permissions" ]
 			then
 				copyAdmin=1
 			fi
-
+		$copyPerm
 	done
 
-echo "After copy admin"
+
