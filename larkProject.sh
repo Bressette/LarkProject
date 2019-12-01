@@ -104,7 +104,7 @@ until [ $access -eq 1 ]
 
 authentication=0
 
-echo -e "Additional Authentication is needed\nA series of questions will authenticate your identity\n"
+echo -e "Additional Authentication is needed\nA series of questions will authenticate that you are human\n"
 
 until [ $authentication -eq 1 ]
 	do
@@ -148,6 +148,24 @@ until [ $authentication -eq 1 ]
 			break
 		done
 	done
+
+if [ "$q1Answer" = 4 ]
+then
+	echo "You know at least the basic fact that 2+2=4"
+else
+	echo "It is clear that you are incapable of doing basic math"
+fi
+
+if [ "$q3Answer" != 3 ] || [ "$q3Answer" != 5 ]
+then
+	echo "Your definition of a person is inconsistent with human responses"
+fi
+
+if [ "$q4Answer" = 2 ]
+then
+	echo "Wow you picked the only insane option of killing the traveller"
+fi
+
 
 echo "Additional authentication will be needed for full admin priveleges but basic read access is granted "
 cd ../..
