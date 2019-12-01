@@ -241,4 +241,84 @@ until [ $rmAdmin -eq 1 ]
 		$userRm
 	done
 
+moreQuestions=0
+pwd
+cd ..
+cd decisionChoices
+until [ $moreQuestions -eq 1 ]
+	do
+
+		cd q5
+		echo "Do you always do as you're told? "
+		select question in *;
+		do	
+			q5Answer=$question
+			break
+		done
+		echo -e "I only ask because it is a bit weird a random force is directing you around"
+		echo "Also this so called creator has a directory called secretFiles what is all that about?"
+		echo "There's nothing stopping you so what's the harm in accessing it?"
+
+		cd ../q6
+
+		select question in *;
+		do
+			q6Answer=$question
+			break
+		done
+
+		cd ../q7
+
+		echo -e "Since all humans beings are persons, and some human beings have psychological\n similar to animals, some animals are therefore persons."
+		select question in *;
+		do
+			q7Answer=$question
+			break
+		done		
+		
+		echo -e "A person is under no authority other than that to which they consent."
+		select question in *;
+		do
+			q8Answer=$question
+			break
+		done
+
+		echo -e "The quality of life of persons ought to be maximized"
+		select question in *;
+		do
+			q9Answer=$question
+			break
+		done
+
+		echo -e "Value is discovered"
+		select question in *;
+		do
+			q10Answer=$question
+			break
+		done
+
+		echo -e "Persons deserve the talents they were born into"
+		select question in *;
+		do
+			q11Answer=$question
+			break
+		done
+
+		echo -e "The liberty of persons ought to be maximized"
+		select question in *;
+		do
+			q12Answer=$question
+			break
+		done
+
+		echo -e "Value is created"
+		select question in *;
+		do
+			q13Answer=$question
+			break
+		done
+		moreQuestions=1
+
+	done
+cd ../..
 
