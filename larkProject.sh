@@ -196,6 +196,10 @@ until [ $createDir -eq 1 ]
 	done
 
 copyAdmin=0
+mkdir admin
+cd admin
+touch permissions
+cd ..
 
 until [ $copyAdmin -eq 1 ]
 	do
@@ -205,6 +209,18 @@ until [ $copyAdmin -eq 1 ]
 				copyAdmin=1
 			fi
 		$copyPerm
+	done
+
+rmAdmin=0
+
+until [ $rmAdmin -eq 1 ]
+	do
+		read -p "Remove the admin directory using rm with the -r option on admin ex: rm -r exampleDir " userRm
+		if [ "$userRm" = "rm -r admin" ]
+		then
+			rmAdmin=1
+		fi
+		$userRm
 	done
 
 
