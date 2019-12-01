@@ -149,7 +149,7 @@ until [ $authentication -eq 1 ]
 		done
 	done
 
-echo "Additional authentication will be needed for full admin priveleges but basic read access is granted"
+echo "Additional authentication will be needed for full admin priveleges but basic read access is granted "
 cd ../..
 cd interestingFiles
 ls
@@ -158,7 +158,7 @@ quit=0
 
 until [ $quit -eq 1 ]
 	do
-		read -p "The less command can be used instead of cat for reading files(Press q to quit)" choice
+		read -p "The less command can be used instead of cat for reading files(Press q to quit) " choice
 		if [ "$choice" = "q" ]
 		then
 			quit=1
@@ -172,7 +172,7 @@ userDir=0
 cd ..
 until [ $userDir -eq 1 ]
 	do
-		echo "To gain full access create a user profile - Change to the users directory using cd"
+		echo "To gain full access create a user profile - Change to the users directory using cd "
 		read changeDir
 		$changeDir
 		if [ "$changeDir" = "cd users" ]
@@ -182,10 +182,11 @@ until [ $userDir -eq 1 ]
 	done
 
 createDir=0
+rm -r $userName
 
 until [ $createDir -eq 1 ]
 	do
-		read -p "Create a directory with your name using mkdir ex: mkdir name" nameDir
+		read -p "Create a directory with your name using mkdir ex: mkdir name " nameDir
 		$nameDir
 		if [ "$nameDir" = "mkdir $userName" ]
 			then
@@ -195,6 +196,16 @@ until [ $createDir -eq 1 ]
 
 	done
 
-echo "After createDir"
+copyAdmin=0
 
+until [ $copyAdmin -eq 1 ]
+	do
+		read -p "Copy the permissions file in users/admin/permissions to users/$userName/permissions using cp source destination " copyPerm
+		if [ "$copyPerm" = "cp admin/permissions $userName/permissions" ]
+			then
+				copyAdmin=1
+			fi
 
+	done
+
+echo "After copy admin"
