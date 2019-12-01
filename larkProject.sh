@@ -116,7 +116,7 @@ until [ $authentication -eq 1 ]
 
 		select question in *;
 		do
-			q1Answer=$questioin
+			q1Answer=$question
 			break
 		done		
 		
@@ -268,7 +268,8 @@ until [ $moreQuestions -eq 1 ]
 		done
 
 		cd ../q7
-
+		
+		echo "For the 2nd set of authentication questions answer yes or no to each question"
 		echo -e "Since all humans beings are persons, and some human beings have psychological\n similar to animals, some animals are therefore persons."
 		select question in *;
 		do
@@ -321,4 +322,124 @@ until [ $moreQuestions -eq 1 ]
 
 	done
 cd ../..
+
+read -p "You now have access to secretFiles do you want to open them? (yes/no)" secretChoice
+
+echo "Thanks for playing bashAIDecisions the following is a summary of your choices"
+
+if [ "$q1Answer" = 4 ]
+then
+	echo "You knew that 2+2=4"
+else
+	echo "You did not know the answer to 2+2"
+fi
+
+if [ "$q2Answer" = 1 ]
+then
+	echo "You thought ^_^ represented being content"
+elif [ "$q2Answer" = 2 ]
+then
+	echo "You thought ^_^ was a face"
+elif [ "$q2Answer" = 3 ]
+then
+	echo "You thought ^_^ was angry"
+elif [ "$q2Answer" = 4 ]
+then
+	echo "You though ^_^ represented being happy"
+fi
+
+if [ "$q3Answer" = 1 ]
+then
+	echo "You thought a person is a being of negative entropy"
+elif [ "$q3Answer" = 2 ]
+then
+	echo "You thought a person is a citizen"
+elif [ "$q3Answer" = 3 ]
+then
+	echo "You thought a person is a human being"
+elif [ "$q3Answer" = 4 ]
+then
+	echo "You thought a person is a problem solving system"
+else
+	echo "You thought a person is a rational animal"
+fi
+
+if [ "$q4Answer" = 1 ]
+then
+	echo "You ignored the thirsty traveller"
+elif [ "$q4Answer" = 2 ]
+then
+	echo "You killed the thirsty traveller, showing some extreme behavior"
+elif [ "$q4Answer" = 3 ]
+then
+	echo "You offered all of your water to the thirsty traveller"
+elif [ "$q4Answer" = 4 ]
+then
+	echo "You offered half of your water to the thirsty traveller"
+fi
+
+if [ "$q5Answer" = 1 ]
+then
+	echo "You always do as you're told"
+else
+	echo "You don't always do as you're told"
+fi
+
+if [ "$q6Answer" = 1 ]
+then
+	echo "You said that you would access secretFiles"
+else
+	echo "You said that you should resist the temptation to access secretFiles"
+fi
+
+if [ "$q7Answer" = 1 ]
+then
+	echo "You thought some animals are people"
+else
+	echo "You did not think that some animals are people"
+fi
+
+if [ "$q8Answer" = 1 ]
+then
+	echo "You agreed that a person is under no authority than that to which they consent to"
+else
+	echo "You disagreed that a person is under no authority other than that to which they consent to"
+fi
+
+if [ "$q9Answer" = 1 ]
+then
+	echo "You agreed that the quality of life of persons should be maximized"
+else
+	echo "You disagreed that the quality of life of persons should be maximized"
+fi
+
+if [ "$q10Answer" = 1 ]
+then
+	echo "You agreed that value is discovered"
+else
+	echo "You disagreed that value is discovered"
+fi
+
+if [ "$q11Answer" = 1 ]
+then
+	echo "You agreed that persons deserve the talents they were born with"
+else
+	echo "You disagreed that persons deserve the talents they were born with"
+fi
+
+if [ "$q12Answer" = 1 ]
+then
+	echo "You agreed that the liberty of persons ought to be maximized"
+else
+	echo "You disagreed that the liberty of persons ought to be maximized"
+fi
+
+if [ "$q13Answer" = 1 ]
+then
+	echo "You agreed that value is created"
+else
+	echo "You disagreed that value is created"
+fi
+
+
 
