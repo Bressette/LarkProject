@@ -1,4 +1,4 @@
-# larkProject
+# LarkProject
 
 Final project for a class about learning bash with the following requirements:
  - Create a game using bash scripting and terminal input
